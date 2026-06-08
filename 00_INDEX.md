@@ -1,4 +1,4 @@
-# Formation MLSecOps — Index Général
+# Formation MLSecOps - Index Général
 
 > **Niveau** : Avancé · **Prérequis** : ML/Data Engineering, DevSecOps, Python  
 > **Durée estimée** : ~60–80h de formation + labs pratiques
@@ -9,7 +9,7 @@
 
 | Module | Titre | Durée est. | Fichier |
 |--------|-------|------------|---------|
-| 00 | Index & Vue d'ensemble | — | `00_INDEX.md` |
+| 00 | Index & Vue d'ensemble | - | `00_INDEX.md` |
 | 01 | Fondamentaux MLSecOps | 4h | `01_FONDAMENTAUX.md` |
 | 02 | Threat Modeling & Attack Surface ML | 6h | `02_THREAT_MODELING.md` |
 | 03 | Sécurité des données & Supply Chain | 8h | `03_DATA_SECURITY.md` |
@@ -124,4 +124,4 @@ pip install modelscanner       # scan de modèles sérialisés
 
 ---
 
-*Formation maintenue par BLDev — Mise à jour : 2025*
+*Formation maintenue par BLDev - Mise à jour : 2025*

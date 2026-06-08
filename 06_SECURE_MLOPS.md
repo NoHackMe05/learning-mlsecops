@@ -1,4 +1,4 @@
-# Module 06 — Secure MLOps Pipeline & CI/CD
+# Module 06 - Secure MLOps Pipeline & CI/CD
 
 > **Durée** : ~8h | **Niveau** : Avancé
 
@@ -38,10 +38,10 @@ SECURE MLOPS PIPELINE
 
 ## 6.2 Sécurité du code ML : SAST et secrets
 
-### 6.2.1 Bandit — Analyse statique Python
+### 6.2.1 Bandit - Analyse statique Python
 
 ```yaml
-# .bandit.yaml — Configuration pour un projet ML
+# .bandit.yaml - Configuration pour un projet ML
 
 skips: []
 tests:
@@ -77,7 +77,7 @@ confidence_threshold: MEDIUM
 ```python
 # Exemples de findings Bandit courants dans le code ML
 
-# ❌ B301 — Pickle usage (HIGH)
+# ❌ B301 - Pickle usage (HIGH)
 import pickle
 model = pickle.load(open('model.pkl', 'rb'))  # Dangereux !
 
@@ -85,14 +85,14 @@ model = pickle.load(open('model.pkl', 'rb'))  # Dangereux !
 import safetensors
 model = safetensors.torch.load_file('model.safetensors')
 
-# ❌ B506 — yaml.load (MEDIUM) 
+# ❌ B506 - yaml.load (MEDIUM) 
 import yaml
 config = yaml.load(open('config.yaml'))  # Vulnérable à l'injection YAML
 
 # ✅ Alternative sécurisée
 config = yaml.safe_load(open('config.yaml'))
 
-# ❌ B311 — Utilisation de random (LOW) pour des tokens
+# ❌ B311 - Utilisation de random (LOW) pour des tokens
 import random
 api_key = ''.join(random.choices('abcdefghijklmnop', k=32))
 
@@ -100,7 +100,7 @@ api_key = ''.join(random.choices('abcdefghijklmnop', k=32))
 import secrets
 api_key = secrets.token_urlsafe(32)
 
-# ❌ B105 — Hardcoded secrets
+# ❌ B105 - Hardcoded secrets
 MLFLOW_TRACKING_TOKEN = "mlf_abc123def456"  # Secret en dur !
 
 # ✅ Alternative sécurisée
@@ -163,7 +163,7 @@ ML_SECRET_PATTERNS = {
 ### 6.3.1 GitLab CI Pipeline complet
 
 ```yaml
-# .gitlab-ci.yml — Pipeline MLSecOps
+# .gitlab-ci.yml - Pipeline MLSecOps
 
 stages:
   - security-scan
@@ -601,7 +601,7 @@ spec:
             sizeLimit: "500Mi"
 
 ---
-# NetworkPolicy — Zero-trust entre pods
+# NetworkPolicy - Zero-trust entre pods
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -800,5 +800,5 @@ async def predict(
 
 ---
 
-*Module suivant → [07 — Monitoring, Détection & Réponse](07_MONITORING.md)*  
-*Module précédent → [05 — Sécurité LLM & GenAI](05_LLM_SECURITY.md)*
+*Module suivant → [07 - Monitoring, Détection & Réponse](07_MONITORING.md)*  
+*Module précédent → [05 - Sécurité LLM & GenAI](05_LLM_SECURITY.md)*

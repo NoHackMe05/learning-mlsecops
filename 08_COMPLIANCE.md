@@ -1,17 +1,17 @@
-# Module 08 — Conformité, Gouvernance & EU AI Act
+# Module 08 - Conformité, Gouvernance & EU AI Act
 
 > **Durée** : ~6h | **Niveau** : Avancé
 
 ---
 
-## 8.1 EU AI Act — Vue d'ensemble et classification des risques
+## 8.1 EU AI Act - Vue d'ensemble et classification des risques
 
 Le règlement européen sur l'intelligence artificielle (EU AI Act, en vigueur depuis août 2024, application progressive jusqu'en 2026) introduit un cadre réglementaire basé sur la **classification par niveau de risque**.
 
 ### 8.1.1 Les 4 niveaux de risque
 
 ```
-EU AI ACT — PYRAMIDE DES RISQUES
+EU AI ACT - PYRAMIDE DES RISQUES
 ──────────────────────────────────────────────────────
                     ┌─────────────────┐
                     │  INACCEPTABLE   │  ← Interdit
@@ -274,11 +274,11 @@ class EUAIActComplianceAssessor:
         }
 ```
 
-### 8.2.2 Technical Documentation (Art. 11) — Template
+### 8.2.2 Technical Documentation (Art. 11) - Template
 
 ```markdown
 # EU AI Act Technical Documentation
-## [Nom du Système AI] — Version X.X.X
+## [Nom du Système AI] - Version X.X.X
 
 *Conforme EU AI Act Annex IV*
 
@@ -290,7 +290,7 @@ class EUAIActComplianceAssessor:
 **Fournisseur** : ...
 **Version** : ...
 **Date de création** : ...
-**Classification risque** : Haut risque — [domaine Annex III]
+**Classification risque** : Haut risque - [domaine Annex III]
 
 **Usage prévu** :
 [Description de l'usage prévu, du contexte de déploiement, des utilisateurs finaux]
@@ -324,7 +324,7 @@ class EUAIActComplianceAssessor:
 **Conformité RGPD** :
 - Base légale : [Intérêt légitime / Consentement / Contrat]
 - DPO notifié : OUI / NON
-- AIPD réalisée : OUI / NON — Référence : ...
+- AIPD réalisée : OUI / NON - Référence : ...
 
 ---
 
@@ -386,7 +386,7 @@ class EUAIActComplianceAssessor:
 ### 8.3.1 Les 4 fonctions du NIST AI RMF
 
 ```
-NIST AI RMF 1.0 — 4 FONCTIONS PRINCIPALES
+NIST AI RMF 1.0 - 4 FONCTIONS PRINCIPALES
 ──────────────────────────────────────────────────────────────────
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -520,14 +520,14 @@ NIST_AIRF_MAPPING = {
 
 ---
 
-## 8.4 ISO/IEC 42001 — Management System for AI
+## 8.4 ISO/IEC 42001 - Management System for AI
 
 ISO/IEC 42001 (2023) est la première norme de système de management pour l'IA, analogue à l'ISO 27001 pour la sécurité de l'information.
 
 ### 8.4.1 Structure de la norme
 
 ```
-ISO/IEC 42001:2023 — STRUCTURE (Format Annex SL)
+ISO/IEC 42001:2023 - STRUCTURE (Format Annex SL)
 ──────────────────────────────────────────────────
 Clause 4  : Contexte de l'organisation
   4.1 Compréhension de l'organisation
@@ -554,7 +554,7 @@ Clause 7  : Support
 Clause 8  : Exploitation
   8.1 Planification et contrôle opérationnel
   8.2 Évaluation de l'impact AI
-  8.3 Système AI — développement et acquisition
+  8.3 Système AI - développement et acquisition
   8.4 Cycle de vie du système AI
 
 Clause 9  : Évaluation des performances
@@ -602,7 +602,7 @@ class ModelRiskAssessment:
     decision_type: str  # "automated", "augmented", "advisory"
 
     # Facteurs de risque inhérent
-    materiality: str           # "HIGH", "MEDIUM", "LOW" — impact business
+    materiality: str           # "HIGH", "MEDIUM", "LOW" - impact business
     complexity: str            # Complexité technique du modèle
     data_quality: str          # Qualité et maturité des données
     regulatory_exposure: str   # Exposition réglementaire
@@ -679,7 +679,7 @@ print(f"Review frequency: {risk_result['review_frequency']}")
 
 ---
 
-## 8.6 Model Card — Template de référence
+## 8.6 Model Card - Template de référence
 
 ```markdown
 # Model Card : [Nom du Modèle]
@@ -693,7 +693,7 @@ print(f"Review frequency: {risk_result['review_frequency']}")
 | Type | XGBoostClassifier |
 | Tâche | Classification binaire (fraude / non-fraude) |
 | Date d'entraînement | 2025-01-15 |
-| Équipe | ML Team — fintech@company.com |
+| Équipe | ML Team - fintech@company.com |
 
 ## Usage prévu
 
@@ -742,8 +742,8 @@ print(f"Review frequency: {risk_result['review_frequency']}")
 
 ## Classification EU AI Act
 
-- **Niveau** : Haut risque (Art. 6, Annex III — Essential private services)
-- **Conformité** : En cours — Voir dossier conformité REF-2025-003
+- **Niveau** : Haut risque (Art. 6, Annex III - Essential private services)
+- **Conformité** : En cours - Voir dossier conformité REF-2025-003
 - **Audit indépendant** : Prévu Q2 2025
 
 ## Historique des versions
@@ -768,5 +768,5 @@ print(f"Review frequency: {risk_result['review_frequency']}")
 
 ---
 
-*Module suivant → [09 — Labs & Cas Pratiques](09_LABS.md)*  
-*Module précédent → [07 — Monitoring, Détection & Réponse](07_MONITORING.md)*
+*Module suivant → [09 - Labs & Cas Pratiques](09_LABS.md)*  
+*Module précédent → [07 - Monitoring, Détection & Réponse](07_MONITORING.md)*

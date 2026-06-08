@@ -1,4 +1,4 @@
-# Module 04 — Adversarial Machine Learning
+# Module 04 - Adversarial Machine Learning
 
 > **Durée** : ~10h | **Niveau** : Expert  
 > **GPU recommandé** pour les labs
@@ -40,7 +40,7 @@ ADVERSARIAL ATTACKS
 
 ---
 
-## 4.2 Attaques Evasion — White-Box
+## 4.2 Attaques Evasion - White-Box
 
 ### 4.2.1 FGSM (Fast Gradient Sign Method)
 
@@ -125,7 +125,7 @@ def evaluate_robustness_fgsm(model, test_loader, epsilons=[0.01, 0.05, 0.1, 0.2]
 
 ```python
 """
-PGD - Madry et al. (2018) — "Towards Deep Learning Models Resistant to Adversarial Attacks"
+PGD - Madry et al. (2018) - "Towards Deep Learning Models Resistant to Adversarial Attacks"
 
 PGD est une version itérative de FGSM (FGSM est PGD avec 1 itération).
 Considéré comme le "first-order adversary" de référence.
@@ -140,7 +140,7 @@ def pgd_attack(model: nn.Module, x: torch.Tensor, y: torch.Tensor,
                epsilon: float = 0.1, alpha: float = 0.01, 
                n_steps: int = 40, random_start: bool = True) -> torch.Tensor:
     """
-    PGD Attack — plus puissante que FGSM car itérative.
+    PGD Attack - plus puissante que FGSM car itérative.
     
     Args:
         epsilon: rayon de la boule L∞ (budget total)
@@ -183,7 +183,7 @@ def pgd_attack(model: nn.Module, x: torch.Tensor, y: torch.Tensor,
 
 ```python
 """
-C&W Attack — Carlini & Wagner (2017)
+C&W Attack - Carlini & Wagner (2017)
 La plus puissante des attaques L2. Formulée comme un problème d'optimisation :
 
 minimize ||δ||₂ + c * f(x + δ)
@@ -656,7 +656,7 @@ def certify_prediction(model, x: torch.Tensor,
 
 ```python
 """
-Adversarial Robustness Toolbox (IBM) — Framework de référence
+Adversarial Robustness Toolbox (IBM) - Framework de référence
 pour l'évaluation et la défense adversariale.
 """
 
@@ -828,5 +828,5 @@ class TabularAdversarialAttack:
 
 ---
 
-*Module suivant → [05 — Sécurité LLM & GenAI](05_LLM_SECURITY.md)*  
-*Module précédent → [03 — Data Security & Supply Chain](03_DATA_SECURITY.md)*
+*Module suivant → [05 - Sécurité LLM & GenAI](05_LLM_SECURITY.md)*  
+*Module précédent → [03 - Data Security & Supply Chain](03_DATA_SECURITY.md)*

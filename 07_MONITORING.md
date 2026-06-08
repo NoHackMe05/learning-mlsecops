@@ -1,4 +1,4 @@
-# Module 07 — Monitoring, Détection & Réponse aux incidents ML
+# Module 07 - Monitoring, Détection & Réponse aux incidents ML
 
 > **Durée** : ~6h | **Niveau** : Avancé
 
@@ -281,7 +281,7 @@ class AdversarialInputDetector:
     def _initialize_detectors(self):
         """Initialise les détecteurs sur les données de référence."""
 
-        # 1. Isolation Forest — Détection d'outliers
+        # 1. Isolation Forest - Détection d'outliers
         self._detectors["iforest"] = IForest(
             threshold=None,
             n_estimators=100,
@@ -290,11 +290,11 @@ class AdversarialInputDetector:
         )
         self._detectors["iforest"].fit(self.X_train)
 
-        # 2. Mahalanobis Distance — Détection basée sur la distribution
+        # 2. Mahalanobis Distance - Détection basée sur la distribution
         self._detectors["mahalanobis"] = Mahalanobis(threshold=None)
         self._detectors["mahalanobis"].fit(self.X_train)
 
-        # 3. MMD Drift — Maximum Mean Discrepancy pour le drift de batch
+        # 3. MMD Drift - Maximum Mean Discrepancy pour le drift de batch
         self._detectors["mmd_drift"] = MMDDrift(
             self.X_train,
             backend='numpy',
@@ -302,7 +302,7 @@ class AdversarialInputDetector:
             n_permutations=100
         )
 
-        # 4. KS Drift — Par feature
+        # 4. KS Drift - Par feature
         self._detectors["ks_drift"] = KSDrift(
             self.X_train,
             p_val=0.05
@@ -533,7 +533,7 @@ class ModelExtractionDetector:
       ]}
     },
     {
-      "title": "Data Drift Score — Features",
+      "title": "Data Drift Score - Features",
       "type": "timeseries",
       "targets": [{
         "expr": "ml_drift_score",
@@ -648,7 +648,7 @@ groups:
           summary: "PII détectée dans les outputs LLM"
           description: >
             Des données personnelles ont été détectées dans les réponses du LLM.
-            Action immédiate requise — vérifier les guardrails.
+            Action immédiate requise - vérifier les guardrails.
 
       # Latence anormale (sponge attack)
       - alert: MLServingAbnormalLatency
@@ -860,7 +860,7 @@ class MLIncidentResponsePlaybook:
 ### 7.5.2 Post-Mortem template ML
 
 ```markdown
-# Post-Mortem — Incident ML
+# Post-Mortem - Incident ML
 
 ## Métadonnées
 - **ID Incident** : INC-ML-YYYY-XXX
@@ -876,7 +876,7 @@ class MLIncidentResponsePlaybook:
 ## Impact
 - Utilisateurs affectés : N
 - Prédictions compromises : N (X% du volume)
-- Données exposées : [OUI/NON] — si OUI, nature des données
+- Données exposées : [OUI/NON] - si OUI, nature des données
 - Coût estimé : €
 
 ## Timeline
@@ -935,5 +935,5 @@ _Qu'est-ce qui a directement causé l'incident ?_
 
 ---
 
-*Module suivant → [08 — Conformité, Gouvernance & EU AI Act](08_COMPLIANCE.md)*  
-*Module précédent → [06 — Secure MLOps Pipeline & CI/CD](06_SECURE_MLOPS.md)*
+*Module suivant → [08 - Conformité, Gouvernance & EU AI Act](08_COMPLIANCE.md)*  
+*Module précédent → [06 - Secure MLOps Pipeline & CI/CD](06_SECURE_MLOPS.md)*

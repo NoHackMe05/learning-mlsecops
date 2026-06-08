@@ -1,4 +1,4 @@
-# Module 03 — Sécurité des données & Supply Chain ML
+# Module 03 - Sécurité des données & Supply Chain ML
 
 > **Durée** : ~8h | **Niveau** : Avancé
 
@@ -776,5 +776,5 @@ stages:
 
 ---
 
-*Module suivant → [04 — Adversarial Machine Learning](04_ADVERSARIAL_ML.md)*  
-*Module précédent → [02 — Threat Modeling](02_THREAT_MODELING.md)*
+*Module suivant → [04 - Adversarial Machine Learning](04_ADVERSARIAL_ML.md)*  
+*Module précédent → [02 - Threat Modeling](02_THREAT_MODELING.md)*

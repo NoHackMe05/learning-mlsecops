@@ -1,4 +1,4 @@
-# Module 02 — Threat Modeling & Attack Surface ML
+# Module 02 - Threat Modeling & Attack Surface ML
 
 > **Durée** : ~6h | **Niveau** : Avancé
 
@@ -52,12 +52,12 @@ Avant de modéliser les menaces, il faut décomposer le système dans sa totalit
 
 **PASTA** (Process for Attack Simulation and Threat Analysis) adapté ML :
 
-**Étape 1 — Définition des objectifs business**
+**Étape 1 - Définition des objectifs business**
 - Quel est le coût d'une prédiction erronée ?
 - Quel est le coût d'une compromission de confidentialité ?
 - Quelles sont les contraintes réglementaires (EU AI Act, RGPD) ?
 
-**Étape 2 — Définition du scope technique**
+**Étape 2 - Définition du scope technique**
 ```python
 # Checklist de décomposition
 composants = {
@@ -69,19 +69,19 @@ composants = {
 }
 ```
 
-**Étape 3 — Décomposition en DFD**
+**Étape 3 - Décomposition en DFD**
 Identifier tous les flux de données, points d'entrée, limites de confiance.
 
-**Étape 4 — Analyse des menaces (ATLAS + STRIDE-ML)**
+**Étape 4 - Analyse des menaces (ATLAS + STRIDE-ML)**
 Pour chaque composant, appliquer la grille de menaces.
 
-**Étape 5 — Identification des vulnérabilités**
+**Étape 5 - Identification des vulnérabilités**
 Mapper les menaces aux CVE, CWE, et patterns ML connus.
 
-**Étape 6 — Modélisation des attaques**
+**Étape 6 - Modélisation des attaques**
 Construire des arbres d'attaque (Attack Trees).
 
-**Étape 7 — Analyse risque & contre-mesures**
+**Étape 7 - Analyse risque & contre-mesures**
 DREAD scoring adapté ML.
 
 ---
@@ -152,7 +152,7 @@ score = dread_score(
 ### 2.4.1 Surface d'attaque Data Layer
 
 ```
-VECTEURS D'ATTAQUE — Couche Données
+VECTEURS D'ATTAQUE - Couche Données
 ─────────────────────────────────────
 1. Data Sources externes
    ├── Web scraping : injection de contenu adversarial dans les sources
@@ -211,7 +211,7 @@ with safe_open("model.safetensors", framework="pt") as f:
 ### 2.4.3 Surface d'attaque Inference Layer
 
 ```
-VECTEURS D'ATTAQUE — API d'inférence
+VECTEURS D'ATTAQUE - API d'inférence
 ─────────────────────────────────────
 1. Input validation absente
    → Adversarial examples passent sans détection
@@ -242,7 +242,7 @@ VECTEURS D'ATTAQUE — API d'inférence
 | AI Incident Database | Incidents réels | Continu |
 | HiddenLayer Research | Vulnérabilités modèles | Publications |
 | Adversa AI | Rapports d'attaques | Publications |
-| NVD — CVE ML libs | Vulnérabilités dépendances | Continu |
+| NVD - CVE ML libs | Vulnérabilités dépendances | Continu |
 
 ### Indicateurs de compromission ML (ML-IoC)
 
@@ -336,5 +336,5 @@ Contre-mesures :
 
 ---
 
-*Module suivant → [03 — Sécurité des données & Supply Chain](03_DATA_SECURITY.md)*  
-*Module précédent → [01 — Fondamentaux MLSecOps](01_FONDAMENTAUX.md)*
+*Module suivant → [03 - Sécurité des données & Supply Chain](03_DATA_SECURITY.md)*  
+*Module précédent → [01 - Fondamentaux MLSecOps](01_FONDAMENTAUX.md)*

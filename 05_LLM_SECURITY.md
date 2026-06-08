@@ -1,4 +1,4 @@
-# Module 05 — Sécurité des LLM & Systèmes GenAI
+# Module 05 - Sécurité des LLM & Systèmes GenAI
 
 > **Durée** : ~8h | **Niveau** : Avancé  
 > Référence principale : OWASP LLM Top 10
@@ -773,5 +773,5 @@ class LLMSecurityMonitor:
 
 ---
 
-*Module suivant → [06 — Secure MLOps Pipeline & CI/CD](06_SECURE_MLOPS.md)*  
-*Module précédent → [04 — Adversarial Machine Learning](04_ADVERSARIAL_ML.md)*
+*Module suivant → [06 - Secure MLOps Pipeline & CI/CD](06_SECURE_MLOPS.md)*  
+*Module précédent → [04 - Adversarial Machine Learning](04_ADVERSARIAL_ML.md)*

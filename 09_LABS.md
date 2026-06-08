@@ -1,7 +1,7 @@
-# Module 09 — Labs & Cas Pratiques
+# Module 09 - Labs & Cas Pratiques
 
 > **Durée** : ~10h | **Niveau** : Expert  
-> Labs progressifs — du niveau intermédiaire à expert
+> Labs progressifs - du niveau intermédiaire à expert
 
 ---
 
@@ -28,7 +28,7 @@ pip install torch --index-url https://download.pytorch.org/whl/cu121
 
 ---
 
-## Lab 01 — Threat Modeling d'un pipeline ML (2h)
+## Lab 01 - Threat Modeling d'un pipeline ML (2h)
 
 ### Contexte
 Vous êtes MLSecOps engineer dans une fintech. Votre équipe a développé un système de scoring de crédit basé sur un modèle XGBoost. L'architecture est la suivante :
@@ -121,7 +121,7 @@ def generate_threat_model_report(threats: list[Threat]) -> str:
     critical = [t for t in threats if t.risk_level == "CRITICAL"]
     high = [t for t in threats if t.risk_level == "HIGH"]
     
-    report = f"""# Threat Model Report — Credit Scoring System
+    report = f"""# Threat Model Report - Credit Scoring System
     
 ## Summary
 - Total threats: {len(threats)}
@@ -134,7 +134,7 @@ def generate_threat_model_report(threats: list[Threat]) -> str:
     sorted_threats = sorted(threats, key=lambda t: t.dread_score, reverse=True)
     
     for t in sorted_threats[:10]:
-        report += f"""### {t.id} — {t.description[:60]}
+        report += f"""### {t.id} - {t.description[:60]}
 - **Component**: {t.component}
 - **STRIDE**: {t.stride_category.name}
 - **DREAD Score**: {t.dread_score:.1f}/10 ({t.risk_level})
@@ -185,7 +185,7 @@ ADDITIONAL_THREATS_HINTS = {
 
 ---
 
-## Lab 02 — Data Poisoning & Défense (2h)
+## Lab 02 - Data Poisoning & Défense (2h)
 
 ### Objectif
 Implémenter et comparer trois types d'attaques de poisoning, puis mettre en place les défenses correspondantes.
@@ -345,7 +345,7 @@ if __name__ == "__main__":
 
 ---
 
-## Lab 03 — Adversarial Attack & Robustness Evaluation (2h)
+## Lab 03 - Adversarial Attack & Robustness Evaluation (2h)
 
 ### Objectif
 Attaquer un modèle de classification binaire avec FGSM et PGD, puis évaluer la défense via Adversarial Training.
@@ -558,7 +558,7 @@ if __name__ == "__main__":
 
 ---
 
-## Lab 04 — LLM Security : Prompt Injection & Guardrails (2h)
+## Lab 04 - LLM Security : Prompt Injection & Guardrails (2h)
 
 ### Objectif
 Tester des techniques d'injection sur un système RAG simplifié, puis implémenter des guardrails.
@@ -785,7 +785,7 @@ if __name__ == "__main__":
 
 ---
 
-## Lab 05 — Pipeline CI/CD Sécurisé Complet (2h)
+## Lab 05 - Pipeline CI/CD Sécurisé Complet (2h)
 
 ### Objectif
 Assembler un pipeline de sécurité ML de bout en bout et l'intégrer dans une CI simulée.
@@ -917,7 +917,7 @@ class MLSecurityPipeline:
             self.model_path.read_bytes()
         ).hexdigest() if self.model_path.exists() else "NO_FILE"
         
-        passed = True  # VOTRE CODE ICI — Utiliser scan_pickle_file()
+        passed = True  # VOTRE CODE ICI - Utiliser scan_pickle_file()
         findings = []
         
         return SecurityGateResult(
@@ -983,8 +983,8 @@ class MLSecurityPipeline:
             self.results.append(result)
             
             status = "✅ PASS" if result.passed else "❌ FAIL"
-            print(f"  {status} — {result.duration_seconds:.2f}s "
-                  f"— {len(result.findings)} findings")
+            print(f"  {status} - {result.duration_seconds:.2f}s "
+                  f"- {len(result.findings)} findings")
             
             if not result.passed:
                 print(f"  Findings: {json.dumps(result.findings[:2], indent=4)}")
@@ -1064,5 +1064,5 @@ Score < 60  : Formation complémentaire recommandée
 
 ---
 
-*← [Module 08 — Conformité & Gouvernance](08_COMPLIANCE.md)*  
+*← [Module 08 - Conformité & Gouvernance](08_COMPLIANCE.md)*  
 *← [Index général](00_INDEX.md)*

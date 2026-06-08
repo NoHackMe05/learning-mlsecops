@@ -1,4 +1,4 @@
-# Module 01 — Fondamentaux MLSecOps
+# Module 01 - Fondamentaux MLSecOps
 
 > **Durée** : ~4h | **Niveau** : Intermédiaire → Avancé
 
@@ -177,29 +177,29 @@ Compétences requises :
 
 ### ML Security Maturity Model (ML-SMM)
 
-**Niveau 1 — Initial**
+**Niveau 1 - Initial**
 - Pas de contrôle sur les sources de données
 - Modèles non signés, pas de registre centralisé
 - Aucun monitoring de sécurité en production
 
-**Niveau 2 — Reproductible**
+**Niveau 2 - Reproductible**
 - Versionning des données et modèles (DVC, MLflow)
 - Scan basique des dépendances Python
 - Alertes basiques sur les métriques de performance
 
-**Niveau 3 — Défini**
+**Niveau 3 - Défini**
 - Data validation systématique (Great Expectations, Pandera)
 - Signature cryptographique des artefacts
 - Tests adversariaux dans la CI
 - RBAC sur le registre de modèles
 
-**Niveau 4 — Géré**
+**Niveau 4 - Géré**
 - Differential privacy implémentée
 - Model cards & SBOM systématiques
 - Red-teaming périodique
 - Monitoring comportemental en temps réel
 
-**Niveau 5 — Optimisé**
+**Niveau 5 - Optimisé**
 - Adversarial training en production
 - Privacy budget automatisé
 - Threat intelligence ML intégrée
@@ -222,4 +222,4 @@ Compétences requises :
 
 ---
 
-*Module suivant → [02 — Threat Modeling & Attack Surface ML](02_THREAT_MODELING.md)*
+*Module suivant → [02 - Threat Modeling & Attack Surface ML](02_THREAT_MODELING.md)*
